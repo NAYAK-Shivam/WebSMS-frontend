@@ -11,9 +11,12 @@ const MessageForm = () => {
 
     try {
       // Send POST request to backend
-      const res = await axios.post("http://localhost:5000/api/send-message", {
-        messageBody,
-      });
+      const res = await axios.post(
+        "https://web-sms-backend.vercel.app/api/send-message",
+        {
+          messageBody,
+        }
+      );
       setResponse(res.data.message);
     } catch (err) {
       setResponse("Failed to send message");
