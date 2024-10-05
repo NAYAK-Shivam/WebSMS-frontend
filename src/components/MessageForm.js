@@ -10,7 +10,6 @@ const MessageForm = () => {
     e.preventDefault();
 
     try {
-      // Send POST request to backend
       const res = await axios.post(
         "https://web-sms-backend.vercel.app/api/send-message",
         {
